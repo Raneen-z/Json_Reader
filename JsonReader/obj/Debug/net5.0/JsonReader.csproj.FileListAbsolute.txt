@@ -1,0 +1,16 @@
+C:\Users\Ranee\source\repos\JsonReader\JsonReader\bin\Debug\net5.0\JsonReader.exe
+C:\Users\Ranee\source\repos\JsonReader\JsonReader\bin\Debug\net5.0\JsonReader.deps.json
+C:\Users\Ranee\source\repos\JsonReader\JsonReader\bin\Debug\net5.0\JsonReader.runtimeconfig.json
+C:\Users\Ranee\source\repos\JsonReader\JsonReader\bin\Debug\net5.0\JsonReader.runtimeconfig.dev.json
+C:\Users\Ranee\source\repos\JsonReader\JsonReader\bin\Debug\net5.0\JsonReader.dll
+C:\Users\Ranee\source\repos\JsonReader\JsonReader\bin\Debug\net5.0\ref\JsonReader.dll
+C:\Users\Ranee\source\repos\JsonReader\JsonReader\bin\Debug\net5.0\JsonReader.pdb
+C:\Users\Ranee\source\repos\JsonReader\JsonReader\obj\Debug\net5.0\JsonReader.csprojAssemblyReference.cache
+C:\Users\Ranee\source\repos\JsonReader\JsonReader\obj\Debug\net5.0\JsonReader.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ranee\source\repos\JsonReader\JsonReader\obj\Debug\net5.0\JsonReader.AssemblyInfoInputs.cache
+C:\Users\Ranee\source\repos\JsonReader\JsonReader\obj\Debug\net5.0\JsonReader.AssemblyInfo.cs
+C:\Users\Ranee\source\repos\JsonReader\JsonReader\obj\Debug\net5.0\JsonReader.csproj.CoreCompileInputs.cache
+C:\Users\Ranee\source\repos\JsonReader\JsonReader\obj\Debug\net5.0\JsonReader.dll
+C:\Users\Ranee\source\repos\JsonReader\JsonReader\obj\Debug\net5.0\ref\JsonReader.dll
+C:\Users\Ranee\source\repos\JsonReader\JsonReader\obj\Debug\net5.0\JsonReader.pdb
+C:\Users\Ranee\source\repos\JsonReader\JsonReader\obj\Debug\net5.0\JsonReader.genruntimeconfig.cache
