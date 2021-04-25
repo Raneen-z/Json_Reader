@@ -589,7 +589,7 @@ namespace JsonReader
         {
             try
             {
-                Tokenizer t = new Tokenizer(new Input(@"{ ""hi"" : [""j"",{""ff"":4}],""f"":{""t3"":3} } "), new Tokenizable[] {
+                Tokenizer t = new Tokenizer(new Input(@"{ ""name"" : [""Raneen"",{""TemaMate"":""Reema""}],""Batool"":{""age"":23.2e-3} } "), new Tokenizable[] {
 
                 new WhiteSpaceTokenizer(), new CharacterTokenizer(new List<char> { '{','}','[',']',',',':'}), new NumberTokenizer(),new StringTokenizer(), new IdTokenizer( new List<string> {"true","false","null"})
             });
@@ -597,19 +597,24 @@ namespace JsonReader
                 List <Token> tokens=new List<Token> { }; 
                 while (res != null)
                 {
-                    
+                    Console.WriteLine($"Token value: {res.Value} Token type: {res.Type}");
                     tokens.Add(res);
                     res = t.tokenize();
                    
                 }
+                Console.WriteLine("________________________________\n");
+                if (tokens[0].Value.Equals("{"))
+                {
+                    Console.Write("{");
+                    JSONObject j = new JSONObject(tokens, 1);
+                    j.readJSONObject();
+                }
+                else
+                {
+                    throw new Exception("not a valid Json object");
+                }
 
-                    if (tokens[0].Value.Equals("{"))
-                    {   
-                        Console.Write("{");
-                        JSONObject j = new JSONObject(tokens,1);
-                        j.readJSONObject();
-                    }
-                
+
             }
 
             catch (Exception error)
