@@ -170,7 +170,7 @@ namespace JsonReader
                 this.readJKeyValue();
                 if (tokens[this.i].Value.Equals(","))
                 {
-                    Console.Write(tokens[this.i++].Value);
+                    Console.Write(tokens[this.i++].Value+" ");
                     
                     continue;
                 }
@@ -178,7 +178,7 @@ namespace JsonReader
                 else if (tokens[this.i].Value.Equals("}")) 
                 {
                     this.i++;
-                    Console.Write("}");
+                    Console.Write(" }");
                     break;
                    
                 }
@@ -210,7 +210,7 @@ namespace JsonReader
                 }
                 if (this.tokens[this.i].Value.Equals(":"))
                 {
-                    Console.Write(" = ");
+                    Console.Write(" : ");
                     this.i++;
                     
                     if (this.tokens[this.i].Type.Equals("WhiteSpace"))
@@ -219,14 +219,14 @@ namespace JsonReader
                     }
                     if (this.tokens[this.i].Value.Equals("{"))
                     {
-                        Console.Write("{");
+                        Console.Write("{ ");
                        
                         this.i++;
                         this.readJSONObject();
                     }
                     else if (this.tokens[this.i].Value.Equals("["))
                     {
-                        Console.Write("[");
+                        Console.Write("[ ");
                         this.i++;
                         this.readArray();
                         
@@ -278,7 +278,7 @@ namespace JsonReader
 
                 else if (tokens[this.i].Value.Equals(","))
                 {
-                    Console.Write(tokens[this.i++].Value);
+                    Console.Write(tokens[this.i++].Value+" ");
                    
                     continue;
                 }
@@ -294,13 +294,13 @@ namespace JsonReader
                         }
                         if (this.tokens[this.i].Value.Equals("{"))
                         {
-                            Console.Write("{");
+                            Console.Write("{ ");
                             this.i++;
                             this.readJSONObject();
                         }
                         else if (this.tokens[this.i].Value.Equals("["))
                         {
-                            Console.Write("[");
+                            Console.Write("[ ");
                             this.i++;
                             this.readArray();
 
@@ -334,7 +334,7 @@ namespace JsonReader
             {
                
                 this.i++;
-                Console.Write("]");
+                Console.Write(" ]");
                 
             }
             else
