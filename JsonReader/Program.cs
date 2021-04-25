@@ -161,14 +161,14 @@ namespace JsonReader
             
             while(this.i<this.tokens.Count)
             {
-                if (tokens[this.i].Type.Equals("WhiteSpace"))
+                /*if (tokens[this.i].Type.Equals("WhiteSpace"))
                 {
                     this.i++;
                     continue;
-                }
-                
+                }*/
 
-                else if (tokens[this.i].Value.Equals(","))
+                this.readJKeyValue();
+                if (tokens[this.i].Value.Equals(","))
                 {
                     Console.Write(tokens[this.i++].Value);
                     
@@ -185,8 +185,8 @@ namespace JsonReader
                 else
               
                 {
-                    if (this.i < this.tokens.Count)
-                        this.readJKeyValue();
+                    /*if (this.i < this.tokens.Count)
+                        this.readJKeyValue();*/
                 }
 
 
@@ -253,6 +253,10 @@ namespace JsonReader
                     }
                 }
 
+            }
+            else if (this.tokens[this.i].Type.Equals("WhiteSpace"))
+            {
+                this.i++;
             }
             else
             {
@@ -332,7 +336,10 @@ namespace JsonReader
                 this.i++;
                 Console.Write("]");
                 
-                
+            }
+            else
+            {
+                throw new Exception("Error: Missing ] at the end");
             }
 
         }
@@ -589,7 +596,7 @@ namespace JsonReader
         {
             try
             {
-                Tokenizer t = new Tokenizer(new Input(@"{ ""name"" : [""Raneen"",{""TemaMate"":""Reema""}],""Batool"":{""age"":23.2e-3} } "), new Tokenizable[] {
+                Tokenizer t = new Tokenizer(new Input(@"{ ""name"" : [ ""Raneen"", {""TeamMate"":""Reema""}],""Batool"":{""age"":23.2e-3} } "), new Tokenizable[] {
 
                 new WhiteSpaceTokenizer(), new CharacterTokenizer(new List<char> { '{','}','[',']',',',':'}), new NumberTokenizer(),new StringTokenizer(), new IdTokenizer( new List<string> {"true","false","null"})
             });
@@ -619,7 +626,7 @@ namespace JsonReader
 
             catch (Exception error)
             {
-                Console.WriteLine(error.Message);
+                Console.WriteLine($"\n{ error.Message}");
             }
         }
 
